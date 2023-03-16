@@ -1,0 +1,35 @@
+
+
+ALGORITHM algorithm_read
+VAR
+sentence :STRING;
+character : CHAR;
+nbvowels :INTEGER := 0;
+nbcharacters :INTEGER := 0;
+nbwords :INTEGER := 0;
+
+
+BEGIN
+write("Enter a sentence:");
+readln(sentence);
+FOR i := 1 TO length(sentence) DO
+IF sentence[i] IN {"a","e","o","u","i","y","A","E","O","U","I","Y"} THEN
+nbvowels := nbvowels + 1;
+END_IF;
+IF sentence[i] = " " THEN
+nbcharacters=0;
+write("there is no character");
+ELSE
+IF sentence[i]=character THEN
+   nbwords:=nbcharacters+1;
+   write("this is a word");
+   read("this word");
+END_IF
+END_IF
+IF sentence[i] = "." THEN
+write("there is no word,the sentence is over");
+END_IF;
+END_FOR;
+write("Number of vowels:", nbvowels);
+write("Number of words:", nbwords);
+END.

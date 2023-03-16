@@ -1,0 +1,31 @@
+ALGORITHM algorithm_sum
+VAR
+set1: ARRAY[0..length-1] OF INTEGER;
+set2 : ARRAY[0..length-1] OF INTEGER;
+set3 : ARRAY[0..length-1] OF INTEGER;
+i,j,k :INTEGER;
+sum :INTEGER := 0;
+BEGIN
+FOR i FROM 0 TO length(set1)-1 DO
+write("Enter the value for set1 :");
+END_FOR
+FOR j FROM 0 TO length(set2)-1 DO
+write("Enter the value for set3 :");
+END_FOR
+k := 0;
+FOR i FROM 0 TO length(set1)-1 AND FOR j FROM 0 TO length(set2)-1 DO 
+IF set1[i] :=NOT set2[j] THEN
+set3[k] := set1[i];
+set3[k] := set2[j];
+END_IF
+END_FOR
+FOR k FROM 0 TO length(set3)-1 DO
+sum := sum + set3[k];
+END_FOR
+write(sum);
+read(sum);
+END
+
+
+
+
